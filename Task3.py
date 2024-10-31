@@ -83,7 +83,7 @@ area2 = triangle_area(sides2)
 if area1 == area2:
     print("Foul!!!")
 else:
-    print("Треугольники не равновелики.")
+    print("Треугольники не равновеликиe.")
 
 # Zadanie 8
 
@@ -111,8 +111,8 @@ else:
 
 import math
 
-conversion_choice = 1
-angle_value = 180
+conversion_choice = int(input("1 - v gradusi\n2 - v radian\n"))
+angle_value = int(input())
 
 if conversion_choice == 1:
     degrees = math.degrees(angle_value)
@@ -152,6 +152,29 @@ else:
     print("Задание 13: Прямоугольный треугольник не существует.")
 
 # Dop zadaniya 
+
+# Variant 1
+x = int(input("x: "))
+
+def calc_x(x):
+
+    if  -2 < x and x < 5:
+        return 5 * x**2 + 6
+    elif x >= 5:
+        return x**3 + 7
+    elif x <= -2:
+        return -1
+    
+# Variant 2
+x = int(input("x: "))
+
+def calc_x(x):
+
+    if x >= 0:
+        return math.sqrt(x**3 + 5)
+    elif -3 < x and x < 0:
+        return 3 * x**4 + 9
+
 # Variant 3
 x = int(input("x: "))
 
@@ -164,3 +187,79 @@ def calc_x(x):
         return pow(x, 5) + 3.5
 
 print(calc_x(x))
+
+# Variant 4
+x = int(input("x: "))
+
+def calc_x(x):
+
+    if x < 122:
+        return x * math.cos(x)
+    elif -3 < x and x < 0:
+        return 5 * x**2 + 1.7
+    
+# Variant 5
+x = int(input("x: "))
+
+def calc_x(x):
+
+    if 0 < x and x < 2:
+        return x**3 * math.cos(x)
+    elif x >= 2:
+        return 3 * x**4 + 7
+    elif x <= 0:
+        return math.sqrt(5 * x**2 + 16)
+
+# Variant 6
+x = int(input("x: "))
+
+def calc_x(x):
+
+    if x < 1.5:
+        return x * math.tan(x) - math.sin(x)
+    elif 1.5 <= x and x < 2.5:
+        return x**3 + math.sin(x) + 7
+    elif x >= 2.5:
+        return 3 * x**3 + 5
+
+# Variant 7
+x = int(input("x: "))
+
+def calc_x(x):
+
+    if 0 < x and x < 2:
+        return math.sqrt(3 * x**2 + 4)
+    elif x >= 1:
+        return 5 - pow(math.sin(x), 2)
+
+# Variant 8
+x = int(input("x: "))
+
+def calc_x(x):
+
+    if -5 < x and x < 0:
+        return math.sqrt(x**2 + math.fabs(x))
+    elif 0 <= x and x <= 2:
+        return 5 * x**2
+
+# Variant 9
+x = int(input("x: "))
+
+def calc_x(x):
+
+    if 0 <= x and x < 1:
+        return x * pow(math.cos(x), 2) + math.sin(x)
+    elif 1 <= x and x <= 2:
+        return math.sqrt(x**2 + 6 * math.sin(x))
+    elif x > 2:
+        return 1.7 * x**3 + 7
+
+# Variant 10
+x = int(input("x: "))
+
+def calc_x(x):
+
+    if x < 0:
+        return math.sin(x) + amth.sqrt(x**2 + 1.2)
+    elif 2 < x and x <= 6:
+        return pow(math.tan(x), 2) + math.cos(x) + 35
